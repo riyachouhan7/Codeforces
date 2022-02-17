@@ -1,0 +1,29 @@
+By riyachouhan_, contest: Technocup 2022 - Elimination Round 2, problem: (C) Two Arrays, Accepted, #, Copy
+ 
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define endl '\n'
+int main()
+{
+	int t;cin>>t;
+	while(t--){
+		int n;cin>>n;
+		int a[n+1],b[n+1];
+		for(int i=1;i<=n;i++) cin>>a[i];
+		for(int i=1;i<=n;i++) cin>>b[i];
+			sort(a+1,a+n+1);
+			sort(b+1,b+n+1);
+			bool P=1;
+			for(int i=n;i>=1;i--)
+		        if(a[i]!=b[i] && a[i]!=b[i]-1){
+		        	P=0;
+		        	break;
+		    }    	
+		    if(P)
+		    	cout<<"YES"<<'\n';
+		    else
+		    	cout<<"NO"<<'\n';
+	}
+	return 0;
+}
